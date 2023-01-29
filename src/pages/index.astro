@@ -1,24 +1,144 @@
 ---
 // Component Imports
-import Button from '../components/Button.astro';
+import Button from "../components/Button.astro";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 
 <html lang="ja">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro + TailwindCSS</title>
-	</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro + TailwindCSS</title>
+  </head>
 
-	<body>
-		<div class="grid place-items-center h-screen content-center">
-			<Button>Tailwind Button in Astro!</Button>
-			<a href="/markdown-page" class="p-4 underline">Markdown is also supported...</a>
-		</div>
-	</body>
+  <body>
+    <nav>
+      <ul class="flex justify-between items-center p-4">
+        <li>
+          <a href="#" class="text-lg font-medium hover:text-gray-300">Home</a>
+        </li>
+        <!-- <li><a href="#" class="text-lg font-medium hover:text-gray-300">About</a></li>
+		  <li><a href="#" class="text-lg font-medium hover:text-gray-300">Contact</a></li> -->
+      </ul>
+    </nav>
+
+    <section
+      class="bg-center bg-cover py-16"
+      style="background-image: url('https://firebasestorage.googleapis.com/v0/b/yamaneko-house.appspot.com/o/IMG_1422-min.JPG?alt=media&token=342fdb5a-3a13-45c7-a637-e5d5ca43e8a6');
+	  height: 500px;
+	  "
+    >
+      <div class="hero-overlay bg-opacity-60"></div>
+      <div class="container mx-auto text-center">
+        <h1 class="text-4xl font-medium text-white">Welcome to My Website</h1>
+        <p class="text-xl text-gray-500 mx-auto max-w-sm">
+          Discover the latest information and resources here.
+        </p>
+        <div class="mt-6"></div>
+      </div>
+    </section>
+
+    <section
+      class="bg-center bg-cover py-16 sm:bg-left md:bg-center lg:bg-right xl:bg-center"
+      style="background-image: url('https://firebasestorage.googleapis.com/v0/b/yamaneko-house.appspot.com/o/IMG_1422-min.JPG?alt=media&token=342fdb5a-3a13-45c7-a637-e5d5ca43e8a6');
+	  height: 500px;
+	  "
+    >
+      <div class="container mx-auto text-center">
+        <h1 class="text-4xl font-medium text-white">
+          青い海、青い空<br />
+          心ゆくまで<br />
+          ゆったりと
+        </h1>
+        <p class="text-xl text-white mx-auto max-w-sm">
+          星砂の浜まで徒歩2分<br />
+          のんびりと波の音を聴きながら<br />
+          西表島の自然を感じる宿
+        </p>
+      </div>
+    </section>
+  </body>
 </html>
+
+<style>
+  /* Image styles */
+  .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .rounded-lg {
+    border-radius: 0.5rem;
+  }
+
+  /* Add to existing CSS */
+  .mt-6 {
+    margin-top: 1.5rem;
+  }
+
+  /* color classes for background and text */
+  .bg-gray-900 {
+    background-color: #1a202c;
+  }
+  .text-white {
+    color: #fff;
+  }
+
+  /* typography classes for font size and weight */
+  .text-4xl {
+    font-size: 2.25rem;
+  }
+  .font-medium {
+    font-weight: 500;
+  }
+  .text-xl {
+    font-size: 1.25rem;
+  }
+  .text-gray-500 {
+    color: #a0aec0;
+  }
+
+  /* classes for spacing and alignment */
+  .text-center {
+    text-align: center;
+  }
+  .py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .max-w-sm {
+    max-width: 30rem;
+  }
+
+  /* button styles */
+  .bg-blue-500 {
+    background-color: #4299e1;
+  }
+  .py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .rounded-lg {
+    border-radius: 0.5rem;
+  }
+  .hover\:bg-blue-600:hover {
+    background-color: #3182ce;
+  }
+</style>
